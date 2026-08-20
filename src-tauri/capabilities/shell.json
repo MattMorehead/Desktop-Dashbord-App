@@ -1,0 +1,27 @@
+{
+  "identifier": "shell-capability",
+  "description": "Allow python and sidecar",
+  "windows": ["main"],
+  "permissions": [
+    "shell:default",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "agent_sidecar",
+          "sidecar": true
+        },
+        {
+          "name": "python",
+          "cmd": "C:\\Users\\M_Morehead\\Desktop\\projects\\new_project\\.venv\\Scripts\\python.exe",
+          "args": true
+        },
+        {
+          "name": "python_venv",
+          "cmd": "C:\\Users\\M_Morehead\\Desktop\\projects\\new_project\\.venv\\Scripts\\python.exe",
+          "args": true
+        }
+      ]
+    }
+  ]
+}

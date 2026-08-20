@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-stocks-green: #00C805;
+  --color-stocks-red: #FF3B30;
+  --color-news-red: #DC2626;
+}
+
+@layer base {
+  body {
+    @apply bg-[#262626] text-[#F5F5F5];
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .pause-on-hover:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
